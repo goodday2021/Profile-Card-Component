@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+
+img {
+    max-width: 100%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: hsl(185, 75%, 39%);
+    display: flex;
+    
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg); /*first url is the big top left corner circle in the background and the second url is the big bottom right corner circle*/
+    background-repeat: no-repeat, no-repeat; /*so it's only two cirlces and does not repeat to the other corners of the page*/
+    background-position: right 48vw bottom 40vh, left 45vw top 44vh; /*to position the circles, to put space from the right & left and top % bottom*/
+}
+
+.container .cover-photo {
+    background: url(./images/bg-pattern-card.svg);
+}
+
+.container {
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+.wrapper {
+    max-width: 850px;
+    background-color: white; /*white bg color for the class "about"*/
+    border-radius: 15px; /*rounds both corners of the bottom of the card*/
+    overflow: hidden; /*for the cover photo to fit the card, as well to make the border radius appear at the top of the card*/
+    margin: 1rem;
+    
+}
+
+.about img { /*profile picture*/
+    border-radius: 50%; /*to make the profile picture circle*/
+    border: 4px solid white;
+    height: 100px; /*this*/
+    margin-top: -52px; /*and this is to move the profile picture up, so it is between the cover photo and the about class*/
+}
+
+.about h1 {
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 18px;
+    margin: 15px 0 10px 0;
+}
+
+.about h1 span {
+    color: var(--Dark-grayish-blue);
+}
+
+.about p {
+    color: var(--Dark-grayish-blue);
+    font-size: 14px;
+}
+
+.stats {
+    display: flex; /*to make the stats in one row*/
+    justify-content: space-between; /*puts a spece in between the stats*/
+    border-top: 1px solid hsla(227, 10%, 46%, 0.18); /*this is the thin gray line*/
+    margin-top: 26.5px; /*to put a space between "London" and the thin gray line*/
+    padding: 30px 50px; /*to put a space on top, bottom, left, & right around the stats*/
+}
+
+.stats p.num {
+    font-size: 18px;
+    color: var(--Dark-grayish-blue);
+    font-weight: 700; /*to make the numbers bold*/
+    margin-bottom: 4.5px; /*to put a space below the stats number from the words*/
+}
+
